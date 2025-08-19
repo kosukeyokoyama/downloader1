@@ -27,10 +27,5 @@ jobs:
         pip install requests google-auth google-auth-oauthlib google-api-python-client
 
     - name: Run main.py
-      env:
-        FTP_HOST: ${{ secrets.FTP_HOST }}
-        FTP_USER: ${{ secrets.FTP_USER }}
-        FTP_PASS: ${{ secrets.FTP_PASS }}
-        SCOPES1: 'https://www.googleapis.com/auth/gmail.send'
       run: |
         python main.py
